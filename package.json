@@ -1,0 +1,40 @@
+{
+    "name": "persona-prototype",
+    "version": "0.0.1",
+    "description": "Perona Prototype",
+    "private": true,
+    "main": "dist/index.html",
+    "scripts": {
+      "start": "parcel ./src/index.html --port 1235 --open",
+      "build": "parcel build ./src/index.html"
+    },
+    "dependencies": {
+      "babel-polyfill": "^6.26.0",
+      "classnames": "^2.3.1",
+      "lodash": "^4.17.21",
+      "moment": "^2.29.1",
+      "moment-timezone": "^0.5.33",
+      "react": "^17.0.2",
+      "react-clean-router": "^1.0.1",
+      "react-control-flows": "^0.1.5",
+      "react-dom": "^17.0.2",
+      "react-hook-form": "^7.12.0",
+      "react-navigation-view": "^0.1.0",
+      "react-number-format": "^4.6.4",
+      "react-sheet-presentation": "^0.0.2",
+      "react-table": "^7.7.0",
+      "react-use-path": "^0.2.3"
+    },
+    "devDependencies": {
+      "@types/classnames": "^2.3.1",
+      "@types/lodash": "^4.14.171",
+      "@types/moment": "^2.13.0",
+      "@types/react": "^17.0.15",
+      "@types/react-dom": "^17.0.9",
+      "@types/react-table": "^7.7.2",
+      "parcel": "2.0.0-beta.2",
+      "sass": "^1.36.0",
+      "typescript": "^4.3.5"
+    }
+  }
+  
