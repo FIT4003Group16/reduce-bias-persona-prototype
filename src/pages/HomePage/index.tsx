@@ -7,10 +7,11 @@ const HomePage: FC = () => {
     const [_, setPath] = usePath()
 
     return <div className ='page'>
+        
         <div>eshop</div>
-        <button className= "shop-button" onClick={() => setPath('/domains')}>learn more</button>
+        <button className= "shop-button" onClick={() => setPath('/eshop')}>learn more</button>
         <div>e-educationi</div>
-        <button className= "edu-button" onClick={() => setPath('/domains')}>learn-more</button>
+        <button className= "edu-button" onClick={() => setPath('/eedu')}>learn-more</button>
     </div>
 }
 
