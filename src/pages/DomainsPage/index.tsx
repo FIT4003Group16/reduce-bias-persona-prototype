@@ -22,8 +22,8 @@ const DomainsPage: FC<DomainsPageProps> = ({mode}) => {
     return <div>
         <div>{mode === 'eshop' ? 'eshop':'eedu' }</div>
         <button onClick={() => setPath('/')}>back</button>
-        <div>{data?.map((b)=>{
-            return <div>{b.name}</div>
+        <div>{mutableData?.map((b)=>{
+            return <div onClick={()=> setPath(`/${mode}/${b.id}`)}>{b.name}</div>
         })}</div>
     </div>
 }

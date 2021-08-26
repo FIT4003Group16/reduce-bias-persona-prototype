@@ -6,6 +6,7 @@ import { Router,Route,NotFound } from 'react-clean-router'
 import HomePage from './pages/HomePage'
 import DomainsPage from './pages/DomainsPage'
 import TemplatePage from './pages/TemplatePage'
+import DetailPage from './pages/DetailPage'
 
 const Application: FC = () => {
     const [{ path }, setPath] = usePath()
@@ -19,6 +20,18 @@ const Application: FC = () => {
             </Route>
             <Route match= '/eedu'>
                 <DomainsPage mode='eedu' />
+            </Route>
+            <Route match= "/eshop/<id>">
+                <TemplatePage mode= 'eshop' />
+            </Route>
+            <Route match= '/eedu/<id>'>
+                <TemplatePage mode='eedu' />
+            </Route>
+            <Route match= '/eedu/template/<id>'>
+                <DetailPage />
+            </Route>
+            <Route match= '/eshop/template/<id>'>
+                <DetailPage />
             </Route>
         </Router>
         </div>

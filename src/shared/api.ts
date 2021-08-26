@@ -1,7 +1,10 @@
 import {
     APIResponse,
     Bias,
-    BiasCreateInput
+    BiasCreateInput,
+    PersonaCreateInput,
+    PersonaUpdateInput,
+    Persona
 } from './models'
 
 const host = "http://localhost:5000"
@@ -75,5 +78,25 @@ export async function biases(): Promise<Bias[]> {
 }
 
 export async function bias(id: string): Promise<Bias> {
-    return (await _get<Bias>(`/biases${id}`)).data!
+    return (await _get<Bias>(`/biases/${id}`)).data!
+}
+
+export async function personas(): Promise<Persona[]> {
+    return (await _get<Persona[]>('/personas')).data!
+}
+
+export async function persona(id: string): Promise<Persona> {
+    return (await _get<Persona>(`/personas/${id}`)).data!
+}
+
+export async function createPersona(input: PersonaCreateInput): Promise<Persona> {
+    return (await _post<Persona>('/personas', input)).data!
+}
+
+export async function updatePersona(id: string, input: PersonaUpdateInput): Promise<Persona> {
+    return (await _patch<Persona>(`/personas/${id}`, input)).data!
+}
+
+export async function deletePersona(id: string): Promise<void> {
+    await _delete(`/personas/${id}`)
 }
