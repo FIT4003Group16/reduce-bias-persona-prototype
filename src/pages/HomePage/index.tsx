@@ -10,7 +10,7 @@ const HomePage: FC = () => {
         
         <div>eshop</div>
         <button className= "shop-button" onClick={() => setPath('/eshop')}>learn more</button>
-        <div>e-educationi</div>
+        <div>e-education</div>
         <button className= "edu-button" onClick={() => setPath('/eedu')}>learn-more</button>
     </div>
 }
